@@ -75,7 +75,7 @@ function find_icons(evt)
 	$('.details').slideUp('fast');
 
 	// Fetch Search Terms
-	var value = $('#search').val();
+	var value = $('#search').val().toLowerCase();
 	var category = $('#catagory').val();
 	var release = $('#release').val();
 
@@ -137,6 +137,11 @@ function find_icons(evt)
 	// Check if the enter key was pressed, and if there was only one result
 	if (typeof evt != 'undefined' && evt.keyCode == 13) {
 		$('#search').autocomplete('close');
+
+		if($( "ul.icons li:visible" ).length === 1)
+		{
+			 $("ul.icons li:visible").trigger('click');
+		}
 	}
 
 	return false;
