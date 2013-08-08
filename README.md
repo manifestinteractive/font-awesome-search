@@ -5,6 +5,10 @@ This is a tool for making it easier to find the icons you are looking for and qu
 
 The main Font Awesome library is accessible here: [http://fortawesome.github.io/Font-Awesome/](http://fortawesome.github.io/Font-Awesome/)
 
+Purpose:
+---
+Font Awesome is amazing tool, it just needs a little UX love that I cannot provide on their site.  For example, lets say you used Command+F to search their main Icon page... good luck copying the text you need for that icon ;) You have to click the icon, taking you to the detail for that icon, then you have to click back and you loose where you were on the page and have to start all over. You can, of course, use the cheat sheet but then you loose the ability to view it in a different size, and the list on that page does not have links to take you to the detail of that icon.  It's just enough to drive me crazy, and since I love the hell out of Font Awesome, I wanted to help ;)
+
 Demo:
 ---
 * [http://lab.peterschmalfeldt.com/fontawesome/](http://lab.peterschmalfeldt.com/fontawesome/)
