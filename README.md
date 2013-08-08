@@ -7,7 +7,9 @@ The main Font Awesome library is accessible here: [http://fortawesome.github.io/
 
 Demo:
 ---
-[http://lab.peterschmalfeldt.com/fontawesome/](http://lab.peterschmalfeldt.com/fontawesome/)
+* [http://lab.peterschmalfeldt.com/fontawesome/](http://lab.peterschmalfeldt.com/fontawesome/)
+
+* [http://j.mp/fasearch](http://j.mp/fasearch) - A shorter, easier version to remember ( Think [f]ont [a]wesome [search] = __fasearch__  )
 
 Usage:
 ---
