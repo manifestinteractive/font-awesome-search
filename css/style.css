@@ -1,0 +1,426 @@
+* { padding: 0; margin: 0; box-sizing:border-box; -moz-box-sizing:border-box; }
+body
+{
+	font-family: 'Ubuntu', sans-serif;
+	background-color: #fff;
+}
+ul.icons
+{
+	list-style: none;
+}
+ul.icons li
+{
+	cursor: pointer;
+	padding: 8px;
+	border: 1px solid #ddd;
+	width: 300px;
+	float: left;
+	margin: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	color: #333;
+	background: #ccc; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #f5f5f5 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#f5f5f5)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#f5f5f5 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#f5f5f5 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#f5f5f5 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#f5f5f5 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f5f5f5',GradientType=0 ); /* IE6-9 */
+}
+ul.icons li.active:hover,
+ul.icons li.active
+{
+	border: 1px solid #9d261d;
+	color: #FFF;
+	background: #9d261d; /* Old browsers */
+	background: -moz-linear-gradient(top,  #9d261d 0%, #7A1D17 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#9d261d), color-stop(100%,#7A1D17)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #9d261d 0%,#7A1D17 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #9d261d 0%,#7A1D17 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #9d261d 0%,#7A1D17 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #9d261d 0%,#7A1D17 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9d261d', endColorstr='#7A1D17',GradientType=0 ); /* IE6-9 */
+	text-shadow: 1px 1px 1px #000;
+}
+ul.icons li:hover
+{
+	border: 1px solid #1b1b1b;
+	color: #FFF;
+	background: #1b1b1b; /* Old browsers */
+	background: -moz-linear-gradient(top,  #333333 0%, #1b1b1b 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#333333), color-stop(100%,#1b1b1b)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #333333 0%,#1b1b1b 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #333333 0%,#1b1b1b 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #333333 0%,#1b1b1b 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #333333 0%,#1b1b1b 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#1b1b1b',GradientType=0 ); /* IE6-9 */
+}
+ul.icons li span
+{
+	text-indent: 12px;
+	display: block;
+	line-height: 32px;
+}
+ul.icons li i
+{
+	width: 32px;
+	height: 32px;
+	font-size: 32px;
+	text-align: center;
+	display: block;
+	float: left;
+}
+.ui-autocomplete {
+	max-height: 300px;
+	overflow-y: auto;
+	/* prevent horizontal scrollbar */
+	overflow-x: hidden;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 14px;
+	background-color: #f5f5f5;
+	background-color: rgba(255, 255, 255, 0.95);
+	border: none;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	border: none;
+	-moz-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+}
+.ui-menu-item a:hover,
+.ui-menu-item a.ui-state-focus,
+.ui-menu-item a.ui-state-active
+{
+	border: 1px solid #9d261d;
+	color: #FFF;
+	background-color: #9d261d;
+	background: #9d261d; /* Old browsers */
+	background: -moz-linear-gradient(top,  #9d261d 0%, #7A1D17 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#9d261d), color-stop(100%,#7A1D17)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #9d261d 0%,#7A1D17 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #9d261d 0%,#7A1D17 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #9d261d 0%,#7A1D17 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #9d261d 0%,#7A1D17 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9d261d', endColorstr='#7A1D17',GradientType=0 ); /* IE6-9 */
+	text-shadow: 1px 1px 1px #000;
+}
+.ui-menu-item a
+{
+	color: #333;
+}
+/* IE 6 doesn't support max-height
+* we use height instead, but this forces the menu to always be this tall
+*/
+* html .ui-autocomplete {
+	height: 100px;
+}
+#search
+{
+	padding: 8px;
+	border: 2px solid #ccc;
+	width: 608px;
+	margin: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 14px;
+	text-indent: 10px;
+	-moz-appearance:none;
+	-webkit-appearance:none;
+	outline: none;
+}
+#search:focus {
+	border: 2px solid #666;
+}
+.header
+{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+	background-color: #fff
+}
+.header .wrapper
+{
+	color: #fff;
+	text-shadow: 1px 1px 1px #000;
+	height: 30px;
+	background-color: #9d261d;
+	width: 100%;
+}
+.header .title
+{
+	line-height: 30px;
+}
+.header .title span
+{
+	font-size: 10px;
+	margin-left: 10px;
+	text-shadow: none;
+	line-height: 30px;
+}
+.header .title span a
+{
+	color: #fff;
+	text-decoration: none;
+}
+.header .title .right
+{
+	float: right;
+	font-size: 12px;
+	text-shadow: none;
+	line-height: 30px;
+}
+.header .title .right a
+{
+	color: #fff;
+	text-decoration: none;
+}
+.filters
+{
+	padding: 22px 0 17px;
+	background-color: #f5f5f5;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #ddd;
+}
+.tools, .list, .header .title, .details-wrapper
+{
+	width: 924px;
+	margin: 0 auto;
+}
+.list
+{
+	margin-top: 120px;
+}
+.list.detailed
+{
+	margin-top: 270px;
+}
+.demo
+{
+	float: left;
+	width: 350px;
+	padding: 10px 0;
+}
+.sample
+{
+	color: #9d261d;
+	padding-right: 20px;
+	display: inline-block;
+	text-shadow: 1px 1px 1px #000;
+	display: none;
+}
+.size-4
+{
+	font-size: 128px;
+}
+.size-3
+{
+	font-size: 64px;
+}
+.size-2
+{
+	font-size: 32px;
+}
+.size-1
+{
+	font-size: 16px;
+	padding-right: 0;
+}
+.details
+{
+	display: none;
+	background-color: #e6e6e6;
+	background-repeat: repeat-x;
+	background-image: -moz-linear-gradient(-40deg, #eeeeee, #e6e6e6);
+	background-image: -webkit-linear-gradient(-40deg, #eeeeee, #e6e6e6);
+	background-image: -o-linear-gradient(-40deg, #eeeeee, #e6e6e6);
+	background-image: linear-gradient(-40deg, #eeeeee, #e6e6e6);
+	color: #222222;
+	text-shadow: 1px 1px 1px #ffffff;
+	border-bottom: solid 1px #c4c4c4;
+	height: 150px;
+	overflow: hidden;
+}
+pre
+{
+	display: inline-block;
+	padding: 0 4px;
+	font-size: 18px;
+}
+.info pre
+{
+	text-transform: uppercase;
+}
+.info
+{
+	color: #999;
+	padding: 10px 0;
+}
+.name
+{
+	padding-top: 20px;
+}
+.name a
+{
+	color: #222;
+	text-decoration: none;
+}
+.name a i
+{
+	color: #BBB;
+	font-size: 12px;
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 4px;
+}
+.name a:hover i
+{
+	color: #666;
+}
+.copy pre
+{
+	font-size: 12px;
+}
+.aliases
+{
+	font-size: 12px;
+	color: #888;
+	padding-left: 10px;
+}
+
+/*
+
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+
+*/
+
+pre code {
+	display: block;
+	padding: 0;
+	color: #333;
+	background: transparent;
+}
+
+pre .comment,
+pre .template_comment,
+pre .diff .header,
+pre .javadoc {
+  color: #998;
+  font-style: italic
+}
+
+pre .keyword,
+pre .css .rule .keyword,
+pre .winutils,
+pre .javascript .title,
+pre .nginx .title,
+pre .subst,
+pre .request,
+pre .status {
+  color: #333;
+  font-weight: bold
+}
+
+pre .number,
+pre .hexcolor,
+pre .ruby .constant {
+  color: #099;
+}
+
+pre .string,
+pre .tag .value,
+pre .phpdoc,
+pre .tex .formula {
+  color: #d14
+}
+
+pre .title,
+pre .id {
+  color: #900;
+  font-weight: bold
+}
+
+pre .javascript .title,
+pre .lisp .title,
+pre .clojure .title,
+pre .subst {
+  font-weight: normal
+}
+
+pre .class .title,
+pre .haskell .type,
+pre .vhdl .literal,
+pre .tex .command {
+  color: #458;
+  font-weight: bold
+}
+
+pre .tag,
+pre .tag .title,
+pre .rules .property,
+pre .django .tag .keyword {
+  color: #000080;
+  font-weight: normal
+}
+
+pre .attribute,
+pre .variable,
+pre .lisp .body {
+  color: #008080
+}
+
+pre .regexp {
+  color: #009926
+}
+
+pre .class {
+  color: #458;
+  font-weight: bold
+}
+
+pre .symbol,
+pre .ruby .symbol .string,
+pre .lisp .keyword,
+pre .tex .special,
+pre .prompt {
+  color: #990073
+}
+
+pre .built_in,
+pre .lisp .title,
+pre .clojure .built_in {
+  color: #0086b3
+}
+
+pre .preprocessor,
+pre .pi,
+pre .doctype,
+pre .shebang,
+pre .cdata {
+  color: #999;
+  font-weight: bold
+}
+
+pre .deletion {
+  background: #fdd
+}
+
+pre .addition {
+  background: #dfd
+}
+
+pre .diff .change {
+  background: #0086b3
+}
+
+pre .chunk {
+  color: #aaa
+}

@@ -1,0 +1,102 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Font Awesome - Icon Search Tool</title>
+
+		<meta name="description" content="Font Awesome, the iconic font designed for Bootstrap">
+		<meta name="author" content="Peter Schmalfeldt">
+		<meta name="viewport" content="width=960, initial-scale=1.0">
+
+		<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:300,400">
+		<link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/default.min.css">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/jquery-ui.css" />
+		<link rel="stylesheet" href="css/style.css" />
+
+		<link rel="shortcut icon" href="favicon.ico">
+
+		<!--[if IE 7]>
+		<link rel="stylesheet" href="css/font-awesome-ie7.min.css">
+		<![endif]-->
+
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+		<script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+	</head>
+	<body>
+		<div class="header">
+			<div class="wrapper">
+				<div class="title">
+					<i class="icon-flag"></i>&nbsp; Font Awesome - Icon Search Tool <span><a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">( For Version 3.2 ) &nbsp;<i class="icon-external-link-sign"></i></a></span>
+					<div class="right"><a href="https://github.com/manifestinteractive/font-awesome-search" target="_blank"><i class="icon-github-sign"></i>&nbsp; Fork on Github</a> &nbsp; | &nbsp; Created by <a href="http://twitter.com/mrmidi" target="_blank">@mrmidi</a></div>
+				</div>
+			</div>
+			<div class="filters">
+				<div class="tools">
+					<input type="text" id="search" placeholder="Font Awesome Icon Search ..." autocomplete="off" autofocus />
+
+					<select name="release" id="release" class="release">
+						<option value="">All Versions</option>
+						<option value="3.2">Version 3.2</option>
+						<option value="3.1">Version 3.1</option>
+						<option value="3">Version 3.0</option>
+						<option value="2">Version 2.0</option>
+						<option value="1">Version 1.0</option>
+					</select>
+
+					<select name="catagory" id="catagory" class="catagory">
+						<option value="">All Categories</option>
+						<option value="Brand Icons">Brand Icons</option>
+						<option value="Currency Icons">Currency Icons</option>
+						<option value="Directional Icons">Directional Icons</option>
+						<option value="Medical Icons">Medical Icons</option>
+						<option value="Text Editor Icons">Text Editor Icons</option>
+						<option value="Video Player Icons">Video Player Icons</option>
+						<option value="Web Application Icons">Web Application Icons</option>
+					</select>
+
+					<input type="button" name="reset" id="reset" class="reset" value="Reset" />
+
+				</div>
+			</div>
+			<div class="details">
+				<div class="details-wrapper">
+					<div class="demo"></div>
+					<div class="code">
+						<div class="name"></div>
+						<div class="info"></div>
+						<div class="copy"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="list">
+			<ul class="icons"></ul>
+		</div>
+
+		<script src="js/icons.js"></script>
+		<script src="js/script.js"></script>
+
+		<script type="text/javascript">
+
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-19450824-1']);
+		_gaq.push(['_setDomainName', 'peterschmalfeldt.com']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+
+		</script>
+	</body>
+</html>
