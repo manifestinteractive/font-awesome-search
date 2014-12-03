@@ -5,17 +5,18 @@ This is a tool for making it easier to find the icons you are looking for and qu
 
 The main Font Awesome library is accessible here: [http://fortawesome.github.io/Font-Awesome/](http://fortawesome.github.io/Font-Awesome/)
 
+
 Purpose:
 ---
 Font Awesome is an amazing tool, it just needs a little UX love.  For example, lets say you search their main Icon page... good luck copying the text you need for that icon ;) You have to click the icon, taking you to the detail for that icon, then you have to click back and you loose where you were on the page and have to start all over. You can, of course, use the cheat sheet but then you loose the ability to view it in a different size, and the list on that page does not have links to take you to the detail of that icon.  It's just enough to drive me crazy, and since I love the hell out of Font Awesome, I wanted to help ;)
 
 The main issue I found is if you wanted to know the icons that came out in version 3.1 vs 3.2, or ones that were only available in 1.0.  This is kind of a big deal for designers who work for larger companies that are stuck using older versions of Font Awesome.  They may, for example, be stuck on Version 2.0 and their team wants to know which icons they can use.  Using the Font Awesome website, you would have to click each icon you wanted and then see which release it came out with, for each icon you wanted to look at using. That would suck to have to do with the 300+ icons they now have. With this tool, that process is near instant for ALL icons available.
 
+
 Demo:
 ---
-* [http://lab.peterschmalfeldt.com/fontawesome/](http://lab.peterschmalfeldt.com/fontawesome/)
+[http://faicons.com/](http://faicons.com/)
 
-* [http://j.mp/fasearch](http://j.mp/fasearch) - A shorter, easier version to remember ( Think [f]ont [a]wesome [search] = __fasearch__  )
 
 Usage:
 ---
@@ -31,6 +32,26 @@ Usage:
 
 * __Keyboard Navigation:__ You can use the left and right arrows keys to jump to the previous / next visible icon in the list.  If you want to move more quickly, you can also use the up and down arrows to jump three items at a time.  At any time you can hit the escape key to reset everything.
 
+
 No Results ?
 ---
 Make sure you do not have any filters set as they will limit results that are listed.
+
+
+How to Update:
+---
+If you are want the latest and greatest, and are noticing this project does not have it... here is how to update the project if you would like to contribute:
+
+1.  Copy the contents of https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/src/icons.yml to your clipboard
+
+2.  Paste th contents of icon.yml into http://nodeca.github.io/js-yaml/
+
+3.  Save the `icons:` array in Result (JS object dump) to ./js/icons.js for the value of `var icons = ` 
+
+
+Adding Custom Aliases:
+---
+
+Sometimes you're looking for something and just not finding it.  For example, I always look for `email` and never find it because Font Awesome calls it `envelope`.
+
+I have created the file `./js/aliases.js` to handle this issue.  If you would like a custom alias added to this library, just hit me up on [Twitter @mrmidi](http://twitter.com/mrmidi) with the icon id, and what you would like it to be called so its easier for others to search.

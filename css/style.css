@@ -12,7 +12,7 @@ ul.icons li
 {
 	cursor: pointer;
 	padding: 8px;
-	border: 1px solid #ddd;
+	border: 1px solid #eee;
 	width: 300px;
 	float: left;
 	margin: 4px;
@@ -20,42 +20,22 @@ ul.icons li
 	-moz-border-radius: 4px;
 	border-radius: 4px;
 	color: #333;
-	background: #ccc; /* Old browsers */
-	background: -moz-linear-gradient(top,  #ffffff 0%, #f5f5f5 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#f5f5f5)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #ffffff 0%,#f5f5f5 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #ffffff 0%,#f5f5f5 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #ffffff 0%,#f5f5f5 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #ffffff 0%,#f5f5f5 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f5f5f5',GradientType=0 ); /* IE6-9 */
+	background: #eee;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 ul.icons li.active:hover,
 ul.icons li.active
 {
-	border: 1px solid #9d261d;
+	border: 1px solid #1fa67a;
 	color: #FFF;
-	background: #9d261d; /* Old browsers */
-	background: -moz-linear-gradient(top,  #9d261d 0%, #7A1D17 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#9d261d), color-stop(100%,#7A1D17)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #9d261d 0%,#7A1D17 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #9d261d 0%,#7A1D17 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #9d261d 0%,#7A1D17 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #9d261d 0%,#7A1D17 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9d261d', endColorstr='#7A1D17',GradientType=0 ); /* IE6-9 */
-	text-shadow: 1px 1px 1px #000;
+	background: #1fa67a;
 }
 ul.icons li:hover
 {
-	border: 1px solid #1b1b1b;
+	border: 1px solid #1fa67a;
 	color: #FFF;
-	background: #1b1b1b; /* Old browsers */
-	background: -moz-linear-gradient(top,  #333333 0%, #1b1b1b 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#333333), color-stop(100%,#1b1b1b)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #333333 0%,#1b1b1b 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #333333 0%,#1b1b1b 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #333333 0%,#1b1b1b 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #333333 0%,#1b1b1b 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#1b1b1b',GradientType=0 ); /* IE6-9 */
+	background: #1fa67a;
 }
 ul.icons li span
 {
@@ -65,12 +45,14 @@ ul.icons li span
 }
 ul.icons li i
 {
-	width: 32px;
-	height: 32px;
-	font-size: 32px;
+	width: 24px;
+	height: 24px;
+	font-size: 24px;
 	text-align: center;
 	display: block;
 	float: left;
+    line-height: 34px;
+    margin-left: 8px;
 }
 .ui-autocomplete {
 	max-height: 300px;
@@ -85,31 +67,31 @@ ul.icons li i
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 	border-radius: 4px;
-	border: none;
-	-moz-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
-	-webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
-	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+    border: 1px solid #CCC;
+}
+.ui-menu-item li, .ui-menu-item li:hover
+{
+    border: none !important;
+    outline: none !important;
 }
 .ui-menu-item a:hover,
 .ui-menu-item a.ui-state-focus,
 .ui-menu-item a.ui-state-active
 {
-	border: 1px solid #9d261d;
 	color: #FFF;
-	background-color: #9d261d;
-	background: #9d261d; /* Old browsers */
-	background: -moz-linear-gradient(top,  #9d261d 0%, #7A1D17 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#9d261d), color-stop(100%,#7A1D17)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #9d261d 0%,#7A1D17 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #9d261d 0%,#7A1D17 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #9d261d 0%,#7A1D17 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #9d261d 0%,#7A1D17 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9d261d', endColorstr='#7A1D17',GradientType=0 ); /* IE6-9 */
-	text-shadow: 1px 1px 1px #000;
+	background: #1fa67a;
+    border: none !important;
+    outline: none !important;
 }
 .ui-menu-item a
 {
 	color: #333;
+    border: none;
+    outline: none;
+}
+.ui-state-focus
+{
+    border: none !important;
 }
 /* IE 6 doesn't support max-height
 * we use height instead, but this forces the menu to always be this tall
@@ -134,7 +116,7 @@ ul.icons li i
 	outline: none;
 }
 #search:focus {
-	border: 2px solid #666;
+	border: 2px solid #1fa67a;
 }
 .header
 {
@@ -142,17 +124,13 @@ ul.icons li i
 	width: 100%;
 	top: 0;
 	left: 0;
-	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
-	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
-	box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
 	background-color: #fff
 }
 .header .wrapper
 {
 	color: #fff;
-	text-shadow: 1px 1px 1px #000;
 	height: 30px;
-	background-color: #9d261d;
+	background-color: #1fa67a;
 	width: 100%;
 }
 .header .title
@@ -207,19 +185,19 @@ ul.icons li i
 {
 	float: left;
 	width: 350px;
-	padding: 10px 0;
+    padding-top: 24px;
+    padding-left: 5px;
 }
 .sample
 {
-	color: #9d261d;
+	color: #222;
 	padding-right: 20px;
 	display: inline-block;
-	text-shadow: 1px 1px 1px #000;
 	display: none;
 }
 .size-4
 {
-	font-size: 128px;
+	font-size: 100px;
 }
 .size-3
 {
@@ -263,6 +241,7 @@ pre
 {
 	color: #999;
 	padding: 10px 0;
+    white-space: nowrap;
 }
 .name
 {

@@ -1,16 +1,68 @@
 $(function() {
+
+	var versions = [];
+	var categories = [];
+
+	function compare(a,b) {
+		if (a.name < b.name)
+			return -1;
+		if (a.name > b.name)
+			return 1;
+		return 0;
+	}
+
+	icons.sort(compare);
+
 	$.each(icons, function(index, value) {
+
+		if(versions.indexOf(value.created) === -1)
+		{
+			versions.push(value.created);
+		}
+
 		var aliases = '';
-		$.each(value.aliases, function(alias_index, alias) {
-			aliases += alias;
-			if((alias_index + 1) < value.aliases.length)
+		if(value.aliases)
+		{
+			$.each(value.aliases, function(alias_index, alias) {
+				aliases += alias;
+				if((alias_index + 1) < value.aliases.length)
+				{
+					aliases += ', ';
+				}
+			});
+		}
+
+		var other_aliases = '';
+		if(fa_icon_aliases[value.id])
+		{
+			for(var i=0; i<fa_icon_aliases[value.id].length; i++)
 			{
-				aliases += ',';
+				other_aliases += fa_icon_aliases[value.id][i];
+				if((i+1) < fa_icon_aliases[value.id].length)
+				{
+					other_aliases += ', ';
+				}
 			}
-		});
-		var html = '<li data-order="'+index+'" data-icon="'+value.label+'" data-aliases="'+aliases+'" data-code="'+value.code+'" data-category="'+value.category+'" data-release="'+value.release+'">' +
-			'<i class="icon-'+value.label+'"></i>' +
-			'<span>icon-'+value.label+'<\/span>' +
+		}
+
+		var icon_categories = '';
+		for(var i=0; i<value.categories.length; i++)
+		{
+			icon_categories += value.categories[i];
+			if((i+1) < value.categories.length)
+			{
+				icon_categories += ', ';
+			}
+
+			if(categories.indexOf(value.categories[i]) === -1)
+			{
+				categories.push(value.categories[i]);
+			}
+		}
+
+		var html = '<li data-order="'+index+'" data-id="'+value.id+'" data-aliases="'+aliases+'" data-other="'+other_aliases+'" data-unicode="'+value.unicode+'" data-categories="'+icon_categories+'" data-release="'+value.created+'">' +
+			'<i class="fa fa-'+value.id+'"></i>' +
+			'<span>'+value.name+'<\/span>' +
 			'<\/li>';
 		$('.icons').append(html);
 	});
@@ -21,10 +73,40 @@ $(function() {
 	$('#catagory').change(find_icons);
 	$('#reset').click(reset);
 
+	versions.sort();
+	versions.reverse();
+
+	for(var i=0; i<versions.length; i++)
+	{
+		var option = '<option value="'+versions[i]+'">Version '+versions[i]+'</option>';
+		$('#release').append(option);
+	}
+
+	categories.sort();
+
+	for(var i=0; i<categories.length; i++)
+	{
+		var option = '<option value="'+categories[i]+'">'+categories[i]+'</option>';
+		$('#catagory').append(option);
+	}
+
 	$( "#search" ).autocomplete({
 		delay: 0,
 		minLength: 2,
-		source: icons,
+		source: function(request, response)
+		{
+			var availableTags = $.map(icons, function(icon)
+			{
+				return {
+					label: icon.name,
+					value: icon.id
+				}
+			});
+
+			response(
+				$.ui.autocomplete.filter( availableTags, request.term )
+			);
+		},
 		select: function(){
 			setTimeout(find_icons, 100);
 
@@ -35,7 +117,11 @@ $(function() {
 				}
 			}, 300);
 		}
-	});
+	}).autocomplete( "instance" )._renderItem = function( ul, item ) {
+		return $( "<li>" )
+			.append( "<a><i class='fa fa-fw fa-" + item.value + "'></i>&nbsp; " + item.label + "</a>" )
+			.appendTo( ul );
+	};
 
 	$('ul.icons li').click(function(){
 		render_details($(this).data());
@@ -83,46 +169,50 @@ function find_icons(evt)
 	if(value !== '' && category === '' && release === '')
 	{
 		$("ul.icons li").hide();
-		$("ul.icons li[data-icon*='"+value+"']").show();
+		$("ul.icons li[data-id*='"+value+"']").show();
 		$("ul.icons li[data-aliases*='"+value+"']").show();
+		$("ul.icons li[data-other*='"+value+"']").show();
 	}
 	// Check if we have a search term with a category
 	else if(value !== '' && category !== '' && release === '')
 	{
 		$("ul.icons li").hide();
-		$("ul.icons li[data-icon*='"+value+"']").show();
+		$("ul.icons li[data-id*='"+value+"']").show();
 		$("ul.icons li[data-aliases*='"+value+"']").show();
-		$("ul.icons li:not([data-category='"+category+"'])").hide();
+		$("ul.icons li[data-other*='"+value+"']").show();
+		$("ul.icons li:not([data-categories*='"+category+"'])").hide();
 	}
 	// Check if we have a search term with a release
 	else if(value !== '' && category === '' && release !== '')
 	{
 		$("ul.icons li").hide();
-		$("ul.icons li[data-icon*='"+value+"']").show();
+		$("ul.icons li[data-id*='"+value+"']").show();
 		$("ul.icons li[data-aliases*='"+value+"']").show();
+		$("ul.icons li[data-other*='"+value+"']").show();
 		$("ul.icons li:not([data-release='"+release+"'])").hide();
 	}
 	// Check if we have a search term with a category and release
 	else if(value !== '' && category !== '' && release !== '')
 	{
 		$("ul.icons li").hide();
-		$("ul.icons li[data-icon*='"+value+"']").show();
+		$("ul.icons li[data-id*='"+value+"']").show();
 		$("ul.icons li[data-aliases*='"+value+"']").show();
-		$("ul.icons li:not([data-category='"+category+"'])").hide();
+		$("ul.icons li[data-other*='"+value+"']").show();
+		$("ul.icons li:not([data-categories*='"+category+"'])").hide();
 		$("ul.icons li:not([data-release='"+release+"'])").hide();
 	}
 	else if(category !== '' && release !== '')
 	{
 		$("ul.icons li").hide();
-		$("ul.icons li[data-category='"+category+"']").show();
+		$("ul.icons li[data-categories*='"+category+"']").show();
 		$("ul.icons li[data-release='"+release+"']").show();
-		$("ul.icons li:not([data-category='"+category+"'])").hide();
+		$("ul.icons li:not([data-categories*='"+category+"'])").hide();
 		$("ul.icons li:not([data-release='"+release+"'])").hide();
 	}
 	else if(category !== '')
 	{
 		$("ul.icons li").hide();
-		$("ul.icons li[data-category='"+category+"']").show();
+		$("ul.icons li[data-categories*='"+category+"']").show();
 	}
 	else if(release !== '')
 	{
@@ -152,11 +242,11 @@ function render_details(data)
 {
 	if(typeof window._gaq !== 'undefined')
 	{
-		_gaq.push(['_trackEvent', 'Icons', 'Clicked', data.icon]);
+		_gaq.push(['_trackEvent', 'Icons', 'Clicked', data.id]);
 	}
 
 	// Did the user click the icon that was already active
-	if($("ul.icons li[data-icon='"+data.icon+"']").hasClass('active'))
+	if($("ul.icons li[data-id='"+data.id+"']").hasClass('active'))
 	{
 		$('.details').slideUp('fast');
 		$('.list').removeClass('detailed');
@@ -167,23 +257,23 @@ function render_details(data)
 	{
 		$('ul.icons li').removeClass('active');
 
-		$("ul.icons li[data-icon='"+data.icon+"']").addClass('active');
+		$("ul.icons li[data-id='"+data.id+"']").addClass('active');
 
-		$('.details .name').html('<h1><a href="http://fortawesome.github.io/Font-Awesome/icon/'+data.icon+'/" target="_blank">icon-'+data.icon+'&nbsp;<i class="icon-external-link-sign"><\/i><\/a><\/h1>');
+		$('.details .name').html('<h1><a href="http://fortawesome.github.io/Font-Awesome/icon/'+data.id+'/" target="_blank">fa-'+data.id+'&nbsp;<i class="icon-external-link-sign"><\/i><\/a><\/h1>');
 
 		if(data.aliases != '')
 		{
 			$('.details .name h1').append('<span class="aliases">( Aliases:&nbsp; '+data.aliases+' )</span>');
 		}
 
-		$('.details .info').html('<b>Unicode:</b> <pre><code class="xml">&amp;#x'+data.code+'<\/code><\/pre>&nbsp;&middot;&nbsp; <b>Created:</b> v'+data.release+' &nbsp;&middot;&nbsp; <b>Category:</b> '+data.category+'');
-		$('.details .copy').html('<pre><code class="xml">&lt;i class="icon-'+data.icon+'">&lt;\/i> icon-'+data.icon+'<\/code><\/pre>');
+		$('.details .info').html('<b>Unicode:</b> <pre><code class="xml">&amp;#x'+data.unicode+'<\/code><\/pre>&nbsp;&middot;&nbsp; <b>Created:</b> v'+data.release+' &nbsp;&middot;&nbsp; <b>Category:</b> '+data.categories+'');
+		$('.details .copy').html('<pre><code class="xml">&lt;i class="fa fa-'+data.id+'">&lt;\/i> fa fa-'+data.id+'<\/code><\/pre>');
 
 		$('.details .demo i').remove();
-		$('.details .demo').append('<i class="sample icon-'+data.icon+' size-4"><\/i>');
-		$('.details .demo').append('<i class="sample icon-'+data.icon+' size-3"><\/i>');
-		$('.details .demo').append('<i class="sample icon-'+data.icon+' size-2"><\/i>');
-		$('.details .demo').append('<i class="sample icon-'+data.icon+' size-1"><\/i>');
+		$('.details .demo').append('<i class="sample fa fa-'+data.id+' size-4"><\/i>');
+		$('.details .demo').append('<i class="sample fa fa-'+data.id+' size-3"><\/i>');
+		$('.details .demo').append('<i class="sample fa fa-'+data.id+' size-2"><\/i>');
+		$('.details .demo').append('<i class="sample fa fa-'+data.id+' size-1"><\/i>');
 
 		$('.details').slideDown('fast');
 
