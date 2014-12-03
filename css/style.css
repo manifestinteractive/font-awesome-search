@@ -4,6 +4,13 @@ body
 	font-family: 'Ubuntu', sans-serif;
 	background-color: #fff;
 }
+b.navbar-brand
+{
+    font-family: museo-slab, Georgia, "Times New Roman", Times, serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #fff;
+}
 ul.icons
 {
 	list-style: none;
@@ -102,7 +109,7 @@ ul.icons li i
 #search
 {
 	padding: 8px;
-	border: 2px solid #ccc;
+	border: 1px solid #ccc;
 	width: 608px;
 	margin: 4px;
 	-webkit-border-radius: 4px;
@@ -116,7 +123,7 @@ ul.icons li i
 	outline: none;
 }
 #search:focus {
-	border: 2px solid #1fa67a;
+	border: 1px solid #999;
 }
 .header
 {
@@ -132,6 +139,8 @@ ul.icons li i
 	height: 30px;
 	background-color: #1fa67a;
 	width: 100%;
+    border-bottom: 1px solid #1b926c;
+    color: #b0ddce;
 }
 .header .title
 {
@@ -158,8 +167,14 @@ ul.icons li i
 }
 .header .title .right a
 {
-	color: #fff;
+	color: #b0ddce;
 	text-decoration: none;
+    font-weight: 300;
+    margin-left: 12px;
+}
+.header .title .right a:hover
+{
+    color: #fff;
 }
 .filters
 {

@@ -259,15 +259,15 @@ function render_details(data)
 
 		$("ul.icons li[data-id='"+data.id+"']").addClass('active');
 
-		$('.details .name').html('<h1><a href="http://fortawesome.github.io/Font-Awesome/icon/'+data.id+'/" target="_blank">fa-'+data.id+'&nbsp;<i class="icon-external-link-sign"><\/i><\/a><\/h1>');
+		$('.details .name').html('<h1 id="iconid" onclick="selectText(\'iconid\');">fa-'+data.id+'<\/h1>');
 
 		if(data.aliases != '')
 		{
 			$('.details .name h1').append('<span class="aliases">( Aliases:&nbsp; '+data.aliases+' )</span>');
 		}
 
-		$('.details .info').html('<b>Unicode:</b> <pre><code class="xml">&amp;#x'+data.unicode+'<\/code><\/pre>&nbsp;&middot;&nbsp; <b>Created:</b> v'+data.release+' &nbsp;&middot;&nbsp; <b>Category:</b> '+data.categories+'');
-		$('.details .copy').html('<pre><code class="xml">&lt;i class="fa fa-'+data.id+'">&lt;\/i> fa fa-'+data.id+'<\/code><\/pre>');
+		$('.details .info').html('<b>Unicode:</b> <pre><code class="xml" id="unicode" onclick="selectText(\'unicode\');">&amp;#x'+data.unicode+';<\/code><\/pre>&nbsp;&middot;&nbsp; <b>Created:</b> v'+data.release+' &nbsp;&middot;&nbsp; <b>Category:</b> '+data.categories+'');
+		$('.details .copy').html('<pre><code class="xml" id="iconhtml" onclick="selectText(\'iconhtml\');">&lt;i class="fa fa-'+data.id+'">&lt;\/i><\/code><\/pre>');
 
 		$('.details .demo i').remove();
 		$('.details .demo').append('<i class="sample fa fa-'+data.id+' size-4"><\/i>');
@@ -373,5 +373,21 @@ function navigate(evt)
 				_gaq.push(['_trackEvent', 'Icons', 'Moved', 'Down']);
 			}
 		}
+	}
+}
+function selectText(elm)
+{
+	var range;
+	if (document.selection)
+	{
+		range = document.body.createTextRange();
+		range.moveToElementText(document.getElementById(elm));
+		range.select();
+	}
+	else if (window.getSelection)
+	{
+		range = document.createRange();
+		range.selectNode(document.getElementById(elm));
+		window.getSelection().addRange(range);
 	}
 }
