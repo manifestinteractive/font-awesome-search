@@ -144,7 +144,11 @@ ul.icons li i
 }
 .header .title
 {
-	line-height: 30px;
+    line-height: 30px;
+}
+.header .title > i
+{
+    color: #FFF;
 }
 .header .title span
 {
@@ -152,6 +156,8 @@ ul.icons li i
 	margin-left: 10px;
 	text-shadow: none;
 	line-height: 30px;
+    position: relative;
+    top: -2px;
 }
 .header .title span a
 {
@@ -163,7 +169,7 @@ ul.icons li i
 	float: right;
 	font-size: 12px;
 	text-shadow: none;
-	line-height: 30px;
+
 }
 .header .title .right a
 {

@@ -260,12 +260,6 @@ function render_details(data)
 		$("ul.icons li[data-id='"+data.id+"']").addClass('active');
 
 		$('.details .name').html('<h1 id="iconid" onclick="selectText(\'iconid\');">fa-'+data.id+'<\/h1>');
-
-		if(data.aliases != '')
-		{
-			$('.details .name h1').append('<span class="aliases">( Aliases:&nbsp; '+data.aliases+' )</span>');
-		}
-
 		$('.details .info').html('<b>Unicode:</b> <pre><code class="xml" id="unicode" onclick="selectText(\'unicode\');">&amp;#x'+data.unicode+';<\/code><\/pre>&nbsp;&middot;&nbsp; <b>Created:</b> v'+data.release+' &nbsp;&middot;&nbsp; <b>Category:</b> '+data.categories+'');
 		$('.details .copy').html('<pre><code class="xml" id="iconhtml" onclick="selectText(\'iconhtml\');">&lt;i class="fa fa-'+data.id+'">&lt;\/i><\/code><\/pre>');
 
