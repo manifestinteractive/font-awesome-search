@@ -131,7 +131,8 @@ ul.icons li i
 	width: 100%;
 	top: 0;
 	left: 0;
-	background-color: #fff
+	background-color: #fff;
+	z-index: 100;
 }
 .header .wrapper
 {
@@ -197,10 +198,16 @@ ul.icons li i
 .list
 {
 	margin-top: 120px;
+	padding-bottom: 30px;
 }
 .list.detailed
 {
 	margin-top: 270px;
+}
+.clearfix
+{
+	display: block;
+	clear: both;
 }
 .demo
 {
