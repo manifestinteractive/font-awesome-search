@@ -1,4 +1,4 @@
-Font Awesome - Icon Search Tool ( for Version 4.2 )
+Font Awesome - Icon Search Tool ( for Version 4.3 )
 ---
 
 This is a tool for making it easier to find the icons you are looking for and quickly copy the code you need.
