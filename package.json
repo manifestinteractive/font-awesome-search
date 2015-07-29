@@ -1,0 +1,29 @@
+{
+  "name": "FontAwesomeSearch",
+  "version": "4.4.0",
+  "description": "Font Awesome - Icon Search Tool",
+  "scripts": {
+    "lint": "./node_modules/jshint/bin/jshint --reporter=node_modules/jshint-stylish ./js"
+  },
+  "keywords": [
+    "fontawesome",
+    "font",
+    "awesome",
+    "search"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manifestinteractive/font-awesome-search.git"
+  },
+  "author": {
+    "name": "Peter Schmalfeldt",
+    "email": "me@peterschmalfeldt.com",
+    "url": "http://peterschmalfeldt.com"
+  },
+  "license": "BSD-3-Clause",
+  "dependencies": {},
+  "devDependencies": {
+    "jshint": "^2.8.0",
+    "jshint-stylish": "^2.0.1"
+  }
+}
