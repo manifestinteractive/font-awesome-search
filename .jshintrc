@@ -1,0 +1,25 @@
+{
+  "browser": true,
+  "curly": true,
+  "devel": true,
+  "eqeqeq": true,
+  "eqnull": true,
+  "jasmine": true,
+  "jquery": true,
+  "mocha": true,
+  "nocomma": true,
+  "phantom": true,
+  "undef": true,
+  "bitwise": true,
+  "freeze": true,
+  "latedef": true,
+  "nonbsp": true,
+  "indent": 2,
+  "globals": {
+    "setTimeout": true,
+    "icons": true,
+    "_gaq": true,
+    "hljs": true,
+    "fa_icon_aliases": true
+  }
+}
