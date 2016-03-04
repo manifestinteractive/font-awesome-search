@@ -76,7 +76,7 @@ var icons = [
     id: 'th-large',
     unicode: 'f009',
     created: 1,
-    filter: ['blocks', 'squares', 'boxes'],
+    filter: ['blocks', 'squares', 'boxes', 'grid'],
     categories: ['Text Editor Icons']
   },
   {
@@ -84,7 +84,7 @@ var icons = [
     id: 'th',
     unicode: 'f00a',
     created: 1,
-    filter: ['blocks', 'squares', 'boxes'],
+    filter: ['blocks', 'squares', 'boxes', 'grid'],
     categories: ['Text Editor Icons']
   },
   {
@@ -100,7 +100,14 @@ var icons = [
     id: 'check',
     unicode: 'f00c',
     created: 1,
-    filter: ['checkmark', 'done', 'todo', 'agree', 'accept', 'confirm'],
+    filter: ['checkmark',
+      'done',
+      'todo',
+      'agree',
+      'accept',
+      'confirm',
+      'tick',
+      'ok'],
     categories: ['Web Application Icons']
   },
   {
@@ -109,7 +116,7 @@ var icons = [
     unicode: 'f00d',
     created: 1,
     aliases: ['remove', 'close'],
-    filter: ['close', 'exit', 'x'],
+    filter: ['close', 'exit', 'x', 'cross'],
     categories: ['Web Application Icons']
   },
   {
@@ -243,7 +250,7 @@ var icons = [
     id: 'refresh',
     unicode: 'f021',
     created: 1,
-    filter: ['reload'],
+    filter: ['reload', 'sync'],
     categories: ['Web Application Icons', 'Spinner Icons']
   },
   {
@@ -510,7 +517,7 @@ var icons = [
     id: 'tint',
     unicode: 'f043',
     created: 1,
-    filter: ['raindrop'],
+    filter: ['raindrop', 'waterdrop', 'drop', 'droplet'],
     categories: ['Web Application Icons']
   },
   {
@@ -535,7 +542,7 @@ var icons = [
     id: 'check-square-o',
     unicode: 'f046',
     created: 1,
-    filter: ['todo', 'done', 'agree', 'accept', 'confirm'],
+    filter: ['todo', 'done', 'agree', 'accept', 'confirm', 'ok'],
     categories: ['Web Application Icons', 'Form Control Icons']
   },
   {
@@ -670,7 +677,7 @@ var icons = [
     id: 'check-circle',
     unicode: 'f058',
     created: 1,
-    filter: ['todo', 'done', 'agree', 'accept', 'confirm'],
+    filter: ['todo', 'done', 'agree', 'accept', 'confirm', 'ok'],
     categories: ['Web Application Icons']
   },
   {
@@ -710,7 +717,7 @@ var icons = [
     id: 'check-circle-o',
     unicode: 'f05d',
     created: 1,
-    filter: ['todo', 'done', 'agree', 'accept', 'confirm'],
+    filter: ['todo', 'done', 'agree', 'accept', 'confirm', 'ok'],
     categories: ['Web Application Icons']
   },
   {
@@ -899,7 +906,15 @@ var icons = [
     id: 'comment',
     unicode: 'f075',
     created: 1,
-    filter: ['speech', 'notification', 'note', 'chat', 'bubble', 'feedback'],
+    filter: ['speech',
+      'notification',
+      'note',
+      'chat',
+      'bubble',
+      'feedback',
+      'message',
+      'texting',
+      'sms'],
     categories: ['Web Application Icons']
   },
   {
@@ -975,7 +990,7 @@ var icons = [
     unicode: 'f080',
     created: 1,
     aliases: ['bar-chart-o'],
-    filter: ['graph'],
+    filter: ['graph', 'analytics'],
     categories: ['Web Application Icons', 'Chart Icons']
   },
   {
@@ -1024,7 +1039,12 @@ var icons = [
     id: 'comments',
     unicode: 'f086',
     created: 1,
-    filter: ['conversation', 'notification', 'notes'],
+    filter: ['conversation',
+      'notification',
+      'notes',
+      'message',
+      'texting',
+      'sms'],
     categories: ['Web Application Icons']
   },
   {
@@ -1199,7 +1219,7 @@ var icons = [
     id: 'unlock',
     unicode: 'f09c',
     created: 2,
-    filter: ['protect', 'admin', 'password'],
+    filter: ['protect', 'admin', 'password', 'lock'],
     categories: ['Web Application Icons']
   },
   {
@@ -1572,7 +1592,7 @@ var icons = [
     id: 'caret-down',
     unicode: 'f0d7',
     created: 2,
-    filter: ['more', 'dropdown', 'menu'],
+    filter: ['more', 'dropdown', 'menu', 'triangle down'],
     categories: ['Directional Icons']
   },
   {
@@ -1580,6 +1600,7 @@ var icons = [
     id: 'caret-up',
     unicode: 'f0d8',
     created: 2,
+    filter: ['triangle up'],
     categories: ['Directional Icons']
   },
   {
@@ -1587,7 +1608,7 @@ var icons = [
     id: 'caret-left',
     unicode: 'f0d9',
     created: 2,
-    filter: ['previous', 'back'],
+    filter: ['previous', 'back', 'triangle left'],
     categories: ['Directional Icons']
   },
   {
@@ -1595,7 +1616,7 @@ var icons = [
     id: 'caret-right',
     unicode: 'f0da',
     created: 2,
-    filter: ['next', 'forward'],
+    filter: ['next', 'forward', 'triangle right'],
     categories: ['Directional Icons']
   },
   {
@@ -1679,7 +1700,15 @@ var icons = [
     id: 'comment-o',
     unicode: 'f0e5',
     created: 2,
-    filter: ['notification', 'note'],
+    filter: ['speech',
+      'notification',
+      'note',
+      'chat',
+      'bubble',
+      'feedback',
+      'message',
+      'texting',
+      'sms'],
     categories: ['Web Application Icons']
   },
   {
@@ -1687,7 +1716,12 @@ var icons = [
     id: 'comments-o',
     unicode: 'f0e6',
     created: 2,
-    filter: ['conversation', 'notification', 'notes'],
+    filter: ['conversation',
+      'notification',
+      'notes',
+      'message',
+      'texting',
+      'sms'],
     categories: ['Web Application Icons']
   },
   {
@@ -1736,7 +1770,7 @@ var icons = [
     id: 'exchange',
     unicode: 'f0ec',
     created: 3,
-    filter: ['transfer'],
+    filter: ['transfer', 'arrows', 'arrow'],
     categories: ['Web Application Icons', 'Directional Icons']
   },
   {
@@ -2332,7 +2366,7 @@ var icons = [
     id: 'unlock-alt',
     unicode: 'f13e',
     created: 3.1,
-    filter: ['protect', 'admin', 'password'],
+    filter: ['protect', 'admin', 'password', 'lock'],
     categories: ['Web Application Icons']
   },
   {
@@ -2418,7 +2452,7 @@ var icons = [
     id: 'check-square',
     unicode: 'f14a',
     created: 3.1,
-    filter: ['checkmark', 'done', 'todo', 'agree', 'accept', 'confirm'],
+    filter: ['checkmark', 'done', 'todo', 'agree', 'accept', 'confirm', 'ok'],
     categories: ['Web Application Icons', 'Form Control Icons']
   },
   {
@@ -3450,6 +3484,7 @@ var icons = [
     id: 'header',
     unicode: 'f1dc',
     created: 4.1,
+    filter: ['heading'],
     categories: ['Text Editor Icons']
   },
   {
@@ -3599,6 +3634,7 @@ var icons = [
     id: 'cc-amex',
     unicode: 'f1f3',
     created: 4.2,
+    filter: ['amex'],
     categories: ['Brand Icons', 'Payment Icons']
   },
   {
@@ -3634,6 +3670,7 @@ var icons = [
     id: 'trash',
     unicode: 'f1f8',
     created: 4.2,
+    filter: ['garbage', 'delete', 'remove', 'hide'],
     categories: ['Web Application Icons']
   },
   {
@@ -3676,21 +3713,24 @@ var icons = [
     id: 'area-chart',
     unicode: 'f1fe',
     created: 4.2,
-    categories: ['Web Application Icons', 'Chart Icons']
+    categories: ['Web Application Icons', 'Chart Icons'],
+    filter: ['graph', 'analytics']
   },
   {
     name: 'Pie Chart',
     id: 'pie-chart',
     unicode: 'f200',
     created: 4.2,
-    categories: ['Web Application Icons', 'Chart Icons']
+    categories: ['Web Application Icons', 'Chart Icons'],
+    filter: ['graph', 'analytics']
   },
   {
     name: 'Line Chart',
     id: 'line-chart',
     unicode: 'f201',
     created: 4.2,
-    categories: ['Web Application Icons', 'Chart Icons']
+    categories: ['Web Application Icons', 'Chart Icons'],
+    filter: ['graph', 'analytics']
   },
   {
     name: 'last.fm',
@@ -4038,6 +4078,7 @@ var icons = [
     id: 'user-plus',
     unicode: 'f234',
     created: 4.3,
+    filter: ['sign up', 'signup'],
     categories: ['Web Application Icons']
   },
   {
@@ -4391,6 +4432,7 @@ var icons = [
     id: 'safari',
     unicode: 'f267',
     created: 4.4,
+    filter: ['browser'],
     categories: ['Brand Icons']
   },
   {
@@ -4398,6 +4440,7 @@ var icons = [
     id: 'chrome',
     unicode: 'f268',
     created: 4.4,
+    filter: ['browser'],
     categories: ['Brand Icons']
   },
   {
@@ -4405,6 +4448,7 @@ var icons = [
     id: 'firefox',
     unicode: 'f269',
     created: 4.4,
+    filter: ['browser'],
     categories: ['Brand Icons']
   },
   {
@@ -4419,6 +4463,7 @@ var icons = [
     id: 'internet-explorer',
     unicode: 'f26b',
     created: 4.4,
+    filter: ['browser', 'ie'],
     categories: ['Brand Icons']
   },
   {
@@ -4476,6 +4521,7 @@ var icons = [
     id: 'calendar-check-o',
     unicode: 'f274',
     created: 4.4,
+    filter: ['ok'],
     categories: ['Web Application Icons']
   },
   {
@@ -4483,6 +4529,7 @@ var icons = [
     id: 'industry',
     unicode: 'f275',
     created: 4.4,
+    filter: ['factory'],
     categories: ['Web Application Icons']
   },
   {
@@ -4518,6 +4565,7 @@ var icons = [
     id: 'commenting',
     unicode: 'f27a',
     created: 4.4,
+    filter: ['message'],
     categories: ['Web Application Icons']
   },
   {
@@ -4525,6 +4573,7 @@ var icons = [
     id: 'commenting-o',
     unicode: 'f27b',
     created: 4.4,
+    filter: ['message'],
     categories: ['Web Application Icons']
   },
   {
@@ -4556,5 +4605,154 @@ var icons = [
     created: 4.4,
     url: 'fonticons.com',
     categories: ['Brand Icons']
+  },
+  {
+    name: 'reddit Alien',
+    id: 'reddit-alien',
+    unicode: 'f281',
+    created: 4.5,
+    categories: ['Brand Icons']
+  },
+  {
+    name: 'Edge Browser',
+    id: 'edge',
+    unicode: 'f282',
+    created: 4.5,
+    filter: ['browser', 'ie'],
+    categories: ['Brand Icons']
+  },
+  {
+    name: 'Credit Card',
+    id: 'credit-card-alt',
+    unicode: 'f283',
+    created: 4.5,
+    filter: ['money',
+      'buy',
+      'debit',
+      'checkout',
+      'purchase',
+      'payment',
+      'credit card'],
+    categories: ['Payment Icons', 'Web Application Icons']
+  },
+  {
+    name: 'Codie Pie',
+    id: 'codiepie',
+    unicode: 'f284',
+    created: 4.5,
+    url: 'codiepie.com',
+    categories: ['Brand Icons']
+  },
+  {
+    name: 'MODX',
+    id: 'modx',
+    unicode: 'f285',
+    created: 4.5,
+    categories: ['Brand Icons']
+  },
+  {
+    name: 'Fort Awesome',
+    id: 'fort-awesome',
+    unicode: 'f286',
+    created: 4.5,
+    categories: ['Brand Icons']
+  },
+  {
+    name: 'USB',
+    id: 'usb',
+    unicode: 'f287',
+    created: 4.5,
+    categories: ['Brand Icons']
+  },
+  {
+    name: 'Product Hunt',
+    id: 'product-hunt',
+    unicode: 'f288',
+    created: 4.5,
+    categories: ['Brand Icons']
+  },
+  {
+    name: 'Mixcloud',
+    id: 'mixcloud',
+    unicode: 'f289',
+    created: 4.5,
+    categories: ['Brand Icons']
+  },
+  {
+    name: 'Scribd',
+    id: 'scribd',
+    unicode: 'f28a',
+    created: 4.5,
+    categories: ['Brand Icons']
+  },
+  {
+    name: 'Pause Circle',
+    id: 'pause-circle',
+    unicode: 'f28b',
+    created: 4.5,
+    categories: ['Video Player Icons']
+  },
+  {
+    name: 'Pause Circle Outlined',
+    id: 'pause-circle-o',
+    unicode: 'f28c',
+    created: 4.5,
+    categories: ['Video Player Icons']
+  },
+  {
+    name: 'Stop Circle',
+    id: 'stop-circle',
+    unicode: 'f28d',
+    created: 4.5,
+    categories: ['Video Player Icons']
+  },
+  {
+    name: 'Stop Circle Outlined',
+    id: 'stop-circle-o',
+    unicode: 'f28e',
+    created: 4.5,
+    categories: ['Video Player Icons']
+  },
+  {
+    name: 'Shopping Bag',
+    id: 'shopping-bag',
+    unicode: 'f290',
+    created: 4.5,
+    categories: ['Web Application Icons']
+  },
+  {
+    name: 'Shopping Basket',
+    id: 'shopping-basket',
+    unicode: 'f291',
+    created: 4.5,
+    categories: ['Web Application Icons']
+  },
+  {
+    name: 'Hashtag',
+    id: 'hashtag',
+    unicode: 'f292',
+    created: 4.5,
+    categories: ['Web Application Icons']
+  },
+  {
+    name: 'Bluetooth',
+    id: 'bluetooth',
+    unicode: 'f293',
+    created: 4.5,
+    categories: ['Web Application Icons', 'Brand Icons']
+  },
+  {
+    name: 'Bluetooth',
+    id: 'bluetooth-b',
+    unicode: 'f294',
+    created: 4.5,
+    categories: ['Web Application Icons', 'Brand Icons']
+  },
+  {
+    name: 'Percent',
+    id: 'percent',
+    unicode: 'f295',
+    created: 4.5,
+    categories: ['Web Application Icons']
   }
 ];
