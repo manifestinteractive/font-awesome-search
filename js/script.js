@@ -296,6 +296,16 @@ $(function() {
 				}
 			});
 		}
+    if(value.filter)
+    {
+      $.each(value.filter, function(alias_index, alias) {
+        aliases += alias;
+        if((alias_index + 1) < value.filter.length)
+        {
+          aliases += ', ';
+        }
+      });
+    }
 
 		var other_aliases = '';
 		if(fa_icon_aliases[value.id])
