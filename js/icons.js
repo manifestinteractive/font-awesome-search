@@ -890,7 +890,7 @@ var icons = [
     id: 'calendar',
     unicode: 'f073',
     created: 1,
-    filter: ['date', 'time', 'when'],
+    filter: ['date', 'time', 'when', 'event'],
     categories: ['Web Application Icons']
   },
   {
@@ -1139,6 +1139,7 @@ var icons = [
     id: 'github-square',
     unicode: 'f092',
     created: 1,
+    url: 'github.com/logos',
     filter: ['octocat'],
     categories: ['Brand Icons']
   },
@@ -1211,6 +1212,7 @@ var icons = [
     id: 'github',
     unicode: 'f09b',
     created: 2,
+    url: 'github.com/logos',
     filter: ['octocat'],
     categories: ['Brand Icons']
   },
@@ -2053,6 +2055,7 @@ var icons = [
     id: 'github-alt',
     unicode: 'f113',
     created: 3,
+    url: 'github.com/logos',
     filter: ['octocat'],
     categories: ['Brand Icons']
   },
@@ -2281,7 +2284,7 @@ var icons = [
     id: 'calendar-o',
     unicode: 'f133',
     created: 3.1,
-    filter: ['date', 'time', 'when'],
+    filter: ['date', 'time', 'when', 'event'],
     categories: ['Web Application Icons']
   },
   {
@@ -2977,7 +2980,8 @@ var icons = [
     filter: ['handicap', 'person', 'accessibility', 'accessibile'],
     categories: ['Web Application Icons',
       'Medical Icons',
-      'Transportation Icons']
+      'Transportation Icons',
+      'Accessibility Icons']
   },
   {
     name: 'Vimeo Square',
@@ -3535,7 +3539,7 @@ var icons = [
     id: 'tty',
     unicode: 'f1e4',
     created: 4.2,
-    categories: ['Web Application Icons']
+    categories: ['Web Application Icons', 'Accessibility Icons']
   },
   {
     name: 'Binoculars',
@@ -3796,7 +3800,7 @@ var icons = [
     id: 'cc',
     unicode: 'f20a',
     created: 4.2,
-    categories: ['Web Application Icons']
+    categories: ['Web Application Icons', 'Accessibility Icons']
   },
   {
     name: 'Shekel (ILS)',
@@ -3923,7 +3927,7 @@ var icons = [
     id: 'user-secret',
     unicode: 'f21b',
     created: 4.3,
-    filter: ['whisper', 'spy', 'incognito'],
+    filter: ['whisper', 'spy', 'incognito', 'privacy'],
     categories: ['Web Application Icons']
   },
   {
@@ -4754,5 +4758,173 @@ var icons = [
     unicode: 'f295',
     created: 4.5,
     categories: ['Web Application Icons']
+  },
+  {
+    name: 'GitLab',
+    id: 'gitlab',
+    unicode: 'f296',
+    created: 4.6,
+    url: 'gitlab.com',
+    categories: ['Brand Icons']
+  },
+  {
+    name: 'WPBeginner',
+    id: 'wpbeginner',
+    unicode: 'f297',
+    created: 4.6,
+    url: 'wpbeginner.com',
+    categories: ['Brand Icons']
+  },
+  {
+    name: 'WPForms',
+    id: 'wpforms',
+    unicode: 'f298',
+    created: 4.6,
+    url: 'wpforms.com',
+    categories: ['Brand Icons']
+  },
+  {
+    name: 'Envira Gallery',
+    id: 'envira',
+    unicode: 'f299',
+    created: 4.6,
+    url: 'enviragallery.com',
+    categories: ['Brand Icons']
+  },
+  {
+    name: 'Universal Access',
+    id: 'universal-access',
+    unicode: 'f29a',
+    created: 4.6,
+    categories: ['Web Application Icons', 'Accessibility Icons']
+  },
+  {
+    name: 'Wheelchair Alt',
+    id: 'wheelchair-alt',
+    unicode: 'f29b',
+    created: 4.6,
+    categories: ['Web Application Icons', 'Accessibility Icons']
+  },
+  {
+    name: 'Question Circle Outlined',
+    id: 'question-circle-o',
+    unicode: 'f29c',
+    created: 4.6,
+    categories: ['Web Application Icons', 'Accessibility Icons']
+  },
+  {
+    name: 'Blind',
+    id: 'blind',
+    unicode: 'f29d',
+    created: 4.6,
+    categories: ['Web Application Icons', 'Accessibility Icons']
+  },
+  {
+    name: 'Audio Description',
+    id: 'audio-description',
+    unicode: 'f29e',
+    created: 4.6,
+    categories: ['Web Application Icons', 'Accessibility Icons']
+  },
+  {
+    name: 'Volume Control Phone',
+    id: 'volume-control-phone',
+    unicode: 'f2a0',
+    created: 4.6,
+    categories: ['Web Application Icons', 'Accessibility Icons']
+  },
+  {
+    name: 'Braille',
+    id: 'braille',
+    unicode: 'f2a1',
+    created: 4.6,
+    categories: ['Web Application Icons', 'Accessibility Icons']
+  },
+  {
+    name: 'Assistive Listening Systems',
+    id: 'assistive-listening-systems',
+    unicode: 'f2a2',
+    created: 4.6,
+    categories: ['Web Application Icons', 'Accessibility Icons']
+  },
+  {
+    name: 'American Sign Language Interpreting',
+    id: 'american-sign-language-interpreting',
+    unicode: 'f2a3',
+    created: 4.6,
+    aliases: ['asl-interpreting'],
+    categories: ['Web Application Icons', 'Accessibility Icons']
+  },
+  {
+    name: 'Deaf',
+    id: 'deaf',
+    unicode: 'f2a4',
+    created: 4.6,
+    aliases: ['deafness', 'hard-of-hearing'],
+    categories: ['Web Application Icons', 'Accessibility Icons']
+  },
+  {
+    name: 'Glide',
+    id: 'glide',
+    unicode: 'f2a5',
+    created: 4.6,
+    categories: ['Brand Icons']
+  },
+  {
+    name: 'Glide G',
+    id: 'glide-g',
+    unicode: 'f2a6',
+    created: 4.6,
+    categories: ['Brand Icons']
+  },
+  {
+    name: 'Sign Language',
+    id: 'sign-language',
+    unicode: 'f2a7',
+    created: 4.6,
+    aliases: ['signing'],
+    categories: ['Web Application Icons', 'Accessibility Icons']
+  },
+  {
+    name: 'Low Vision',
+    id: 'low-vision',
+    unicode: 'f2a8',
+    created: 4.6,
+    categories: ['Web Application Icons', 'Accessibility Icons']
+  },
+  {
+    name: 'Viadeo',
+    id: 'viadeo',
+    unicode: 'f2a9',
+    created: 4.6,
+    categories: ['Brand Icons']
+  },
+  {
+    name: 'Viadeo Square',
+    id: 'viadeo-square',
+    unicode: 'f2aa',
+    created: 4.6,
+    categories: ['Brand Icons']
+  },
+  {
+    name: 'Snapchat',
+    id: 'snapchat',
+    unicode: 'f2ab',
+    created: 4.6,
+    categories: ['Brand Icons']
+  },
+  {
+    name: 'Snapchat Ghost',
+    id: 'snapchat-ghost',
+    unicode: 'f2ac',
+    created: 4.6,
+    categories: ['Brand Icons']
+  },
+  {
+    name: 'Snapchat Square',
+    id: 'snapchat-square',
+    unicode: 'f2ad',
+    created: 4.6,
+    categories: ['Brand Icons']
   }
 ];
