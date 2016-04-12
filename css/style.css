@@ -49,6 +49,8 @@ ul.icons li span
 	text-indent: 12px;
 	display: block;
 	line-height: 32px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 ul.icons li i
 {
