@@ -8,6 +8,8 @@ The main Font Awesome library is accessible here: [http://fortawesome.github.io/
 
 ### [http://faicons.com](http://faicons.com)
 
+[![Buy Me Coffee](https://peterschmalfeldt.com/buy-me-coffee.png)](https://www.paypal.me/manifestinteractive)
+
 Usage:
 ---
 * __Search:__ Looks for text in any icon and possible aliases. Example: searching for "empty" ( without quotes ) will find you everything containing that word. Another Example: "yen" will return icon-jpy even through its not the icons name.
