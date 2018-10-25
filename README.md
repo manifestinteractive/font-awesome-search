@@ -34,7 +34,7 @@ How you can Contribute:
 ---
 If you are want the latest and greatest, and are noticing this project does not have it... here is how to update the project if you would like to contribute:
 
-1.  Copy the contents of [https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/src/icons.yml](https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/src/icons.yml) to your clipboard
+1.  Copy the contents of [https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/advanced-options/metadata/icons.yml](https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/advanced-options/metadata/icons.yml) to your clipboard
 
 2.  Paste the contents of `icons.yml` into [http://nodeca.github.io/js-yaml/](http://nodeca.github.io/js-yaml/)
 
